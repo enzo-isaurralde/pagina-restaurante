@@ -1,8 +1,9 @@
-<html><head>
+<html lang="es" class="scroll-smooth"></html>><head>
 <meta charset="utf-8"/>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Epilogue%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
 <title>Pizzas Brujo</title>
+<link rel="stylesheet" href="styles.css">
 <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style type="text/tailwindcss">
@@ -28,9 +29,9 @@
 </div>
 <div class="flex flex-1 justify-end gap-6">
 <nav class="flex items-center gap-8">
-<a class="text-stone-700 hover:text-[var(--primary-color)] text-base font-medium" href="#">Menú</a>
+<a class="text-stone-700 hover:text-[var(--primary-color)] text-base font-medium" href="#nuestroMenu">Menú</a>
 <a class="text-stone-700 hover:text-[var(--primary-color)] text-base font-medium" href="#">Nosotros</a>
-<a class="text-stone-700 hover:text-[var(--primary-color)] text-base font-medium" href="#">Contacto</a>
+<a class="text-stone-700 hover:text-[var(--primary-color)] text-base font-medium" href="#contactoFooter">Contacto</a>
 </nav>
 <button class="flex items-center justify-center rounded-md h-10 bg-[var(--primary-color)] text-white gap-2 text-sm font-bold leading-normal tracking-wide min-w-0 px-6 hover:bg-orange-600 transition-colors">
               Hacé tu pedido
@@ -47,7 +48,9 @@
 <p class="text-xl font-light">Auténtico sabor argentino en cada bocado.</p>
 </div>
 </div>
+<section id="nuestroMenu">
 <h2 class="text-stone-900 text-4xl font-bold tracking-tight px-4 pb-6 pt-16 text-center">Nuestro Menú</h2>
+</section>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
 <div class="bg-[url('OIP.webp')] bg-cover bg-center p-6 rounded-lg shadow-xl">
 <div class="flex items-center gap-6">
@@ -153,7 +156,7 @@
 </div>
 <h2 class="text-stone-900 text-4xl font-bold tracking-tight px-4 pb-6 pt-24 text-center">Dónde Encontrarnos</h2>
 <div class="px-4 py-3">
-<iframe allowfullscreen="" class="w-full aspect-video rounded-lg shadow-lg" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.926868846387!2d-58.38814732448332!3d-34.60601347295333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac656515169%3A0x6b4452c159846b0a!2sMoreno%201515%2C%20C1093ABC%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2sus!4v1716125139460!5m2!1sen!2sus" style="border:0;" width="600"></iframe>
+<iframe allowfullscreen="" class="w-full aspect-video rounded-lg shadow-lg" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13127.026363659495!2d-58.42875065!3d-34.660849649999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbc078ace2eb%3A0x458218af4657bdf0!2sCiudad%20Deportiva%20-%20Club%20Atl%C3%A9tico%20San%20Lorenzo%20de%20Almagro!5e0!3m2!1ses-419!2sar!4v1757029073123!5m2!1ses-419!2sar" style="border:0;" width="600"></iframe>
 </div>
 </div>
 </div>
@@ -162,9 +165,11 @@
 <div class="max-w-7xl mx-auto px-10 py-8">
 <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
 <div class="flex flex-col gap-2">
+<section id="contactoFooter">  
 <p class="font-bold text-lg text-white">Pizzas Brujo</p>
 <p class="text-sm">Moreno 1515, CABA</p>
 <p class="text-sm">Teléfono: 4666-1337</p>
+</section>
 </div>
 <div class="flex items-center gap-4">
 <a class="text-stone-300 hover:text-[var(--primary-color)] transition-colors" href="#">

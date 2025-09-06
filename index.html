@@ -3,7 +3,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Epilogue%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
 <title>Pizzas Brujo</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style type="text/tailwindcss">
@@ -33,9 +33,27 @@
 <a class="text-stone-700 hover:text-[var(--primary-color)] text-base font-medium" href="#">Nosotros</a>
 <a class="text-stone-700 hover:text-[var(--primary-color)] text-base font-medium" href="#contacto">Contacto</a>
 </nav>
-<button class="flex items-center justify-center rounded-md h-10 bg-[var(--primary-color)] text-white gap-2 text-sm font-bold leading-normal tracking-wide min-w-0 px-6 hover:bg-orange-600 transition-colors">
-              Hacé tu pedido
+<button  onclick="toggleModal()" class="flex items-center justify-center rounded-md h-10 bg-[var(--primary-color)] text-white gap-2 text-sm font-bold leading-normal tracking-wide min-w-0 px-6 hover:bg-orange-600 transition-colors"></a>
+               Hacé tu pedido
             </button>
+            <div id="modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-[90%] max-w-sm">
+    <h2 class="text-xl font-bold mb-2">📍 Información del Local</h2>
+    <p class="text-gray-700 text-sm mb-4">
+      🕒 Horarios: Lun a Dom, 18:00–00:00<br>
+      📍 Dirección: Av. Siempre Viva 123<br>
+      📞 Teléfono: +54 11 1234-5678
+    </p>
+    <button onclick="toggleModal()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors">
+      Cerrar
+    </button>
+  </div>
+</div>
+<script>
+  function toggleModal() {
+    const modal = document.getElementById('modal');
+    modal.classList.toggle('hidden');
+  }</script>
 </div>
 </header>
 <main class="flex-1">
@@ -92,28 +110,28 @@
 </div>
 </div>
 </div>
-<div class="bg-black/90 p-6 rounded-lg shadow-xl">
-<div class="flex items-center gap-6">
-<img alt="Pizza Napolitana" class="w-40 h-40 object-cover rounded-md shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJn0tSExMUmtStHiMF6sBGw_1pwhbEYzLnOyrAp4DOiUGEX89qGmqPzfghUSDo5CgD9NTytNE7AJf-icnekMbCR4z4CGvnVpTWa9MXASQ3y5iftOdd8xS0RIqlppDZmXKNaOezLROI2WElmcLbiTAaWQ5lZcWmoZARoyk16RWJPrtG1KnMKkvOFJD4GT_A5ms-CE94C3d3sY2ZmoZ7Rx5z2XV3p-9lyfztVj36Zvsg-RlTWvOJhAuokSo9Teu5FfnDVdznt0jDr6vf"/>
+<div class="bg-[url('jamon-morron-2.jpg')] bg-cover bg-center p-6 rounded-lg shadow-xl">
+<div class="bg-black bg-opacity-70 rounded-xl p-4 flex items-center gap-6 min-h-[200px]">
+<img alt="Pizza Jamón y morrón" class="w-40 h-40 object-cover rounded-md shadow-lg" src="logo-jamon-morron.png"/>
 <div class="flex-1">
-<h3 class="text-white text-xl font-bold">Pizza Napolitana</h3>
+<h3 class="text-white text-xl font-bold">Pizza Jamón y morrón</h3>
 <p class="text-stone-300 mt-1">Mozzarella, rodajas de tomate y ajo.</p>
 <p class="text-[var(--primary-color)] text-lg font-bold mt-2">$16000</p>
 </div>
 </div>
 </div>
-<div class="bg-black/90 p-6 rounded-lg shadow-xl">
-<div class="flex items-center gap-6 md:flex-row-reverse">
-<img alt="Empanada de Jamón y Queso" class="w-40 h-40 object-cover rounded-md shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA756x_a_Sy2BKS3qfDKJgeX3hzPMciQAkuKYN57GHFwBr7AARgu1tiILKzImmzCyEBHTFK508P01cnOGkFInhj2vn1PYQG27pm9-au7j1OZD3JbcV13W6zoV2lsuHD9NiKXnk60JxWmTfB7sFdZjaB4F4a83zsR_C_EIEOLTCcK6I06VQJcHWFVhDDuUJLw6Bs45vbhA91jejl1W-0CFxLLd35y550Y4i2NZK7yYqyUr3y3PzljPq5NYzR4ZL8tJjNT0EPdxvGKC0p"/>
-<div class="flex-1 md:text-right">
+<div class="bg-[url('empanadas.jpg')] bg-cover bg-center p-6 rounded-lg shadow-xl">
+<div class="bg-black bg-opacity-70 rounded-xl p-4 flex items-center gap-6 min-h-[200px]">
+<img alt="Empanada de Jamón y Queso" class="w-40 h-40 object-cover rounded-md shadow-lg" src="empanada-jamon-queso.jpg"/>
+<div class="flex-1 md:text-left">
 <h3 class="text-white text-xl font-bold">Empanada de Jamón y Queso</h3>
 <p class="text-stone-300 mt-1">Jamón cocido y mozzarella derretida.</p>
 <p class="text-[var(--primary-color)] text-lg font-bold mt-2">$16000</p>
 </div>
 </div>
 </div>
-<div class="bg-black/90 p-6 rounded-lg shadow-xl">
-<div class="flex items-center gap-6">
+<div class="bg-[url('fugazzeta-2.png')] bg-cover bg-center p-6 rounded-lg shadow-xl">
+<div class="bg-black bg-opacity-70 rounded-xl p-4 flex items-center gap-6 min-h-[200px]">
 <img alt="Pizza Calabresa" class="w-40 h-40 object-cover rounded-md shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvE3uovx6pGtNkgthYCKhj4GGNBhiwTgbAYO3AoOQhNrYZwQxX9bd4TMJ2vEjaPexHgD3pHM0gWmErky1n1VolR2CcslqaKIzxEe8ZRsEMFBGBlLpRQM-BgBMNYLa00cDcDzuC3faphDS_4QsPyK7rrYLhW43cXSkB19TOOVCcF9fFIy_Vt7otSfi4DUHZDamfAmWzweZZvhhAAjkOcIeDW8MwMvccqZY5s7H0SxbNOolFWsxK_a2keuuR-CPdSFbte2IGSUVDm9MT"/>
 <div class="flex-1">
 <h3 class="text-white text-xl font-bold">Pizza Calabresa</h3>
@@ -122,8 +140,8 @@
 </div>
 </div>
 </div>
-<div class="bg-black/90 p-6 rounded-lg shadow-xl">
-<div class="flex items-center gap-6 md:flex-row-reverse">
+<div class="bg-[url('empanadas.jpg')] bg-cover bg-center p-6 rounded-lg shadow-xl">
+<div class="bg-black bg-opacity-70 rounded-xl p-4 flex items-center gap-6 min-h-[200px]">
 <img alt="Empanada de Verdura" class="w-40 h-40 object-cover rounded-md shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsKBN1wyxFqPVnuRsnSdgBjyEA9NMZjDWseBO2XsLaCXzmCLanstQ2kVdbc1KdAXC6JlO-WHfRrIDHZ12ybdp5Pet6EeKTVehSj4rGeEy6wm0v71lDR4GNPIxw7nuBhX3ZU54WkpGRDEoQysSkpwclYO1PpbArKMkiEuGajFD_4ZDYXQHEJ3dHQid-dzEgp5Ovq1sl1BmkYK2s9QYrsTl5gJeY1-_c_gf0XPpjKGEy4R_lQqHHa47y54qEssZthoZFmcAM4De_s46F"/>
 <div class="flex-1 md:text-right">
 <h3 class="text-white text-xl font-bold">Empanada de Verdura</h3>
@@ -132,8 +150,8 @@
 </div>
 </div>
 </div>
-<div class="bg-black/90 p-6 rounded-lg shadow-xl">
-<div class="flex items-center gap-6">
+<div class="bg-[url('fugazzeta-2.png')] bg-cover bg-center p-6 rounded-lg shadow-xl">
+<div class="bg-black bg-opacity-70 rounded-xl p-4 flex items-center gap-6 min-h-[200px]">
 <img alt="Pizza Cuatro Quesos" class="w-40 h-40 object-cover rounded-md shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDY7h7nDHqfyz_OLy_-HSW-DUFKwtiNCjS6-IOkMin1TyGhnMo8OBGF98Ap8O7qmogeGZlpK02JiEo5zTO3-ljsP0EHJ62IIT-HLSlkOmuicp8oBxVRN1BWhFxNDyo1cZAtBt9fU3D93_0t47-T9qcx8RZw9j40MqoPoLvWH8uTjltF2YijLuIlaziA685CojinrBuXPUEEg3XnwuYS6KlDPXjxyqxc6iaiafVyNiE6TaHwrPpVt3PH5uEH7XOJmKz2fAvIPAuT3iw"/>
 <div class="flex-1">
 <h3 class="text-white text-xl font-bold">Pizza Cuatro Quesos</h3>
@@ -142,8 +160,8 @@
 </div>
 </div>
 </div>
-<div class="bg-black/90 p-6 rounded-lg shadow-xl">
-<div class="flex items-center gap-6 md:flex-row-reverse">
+<div class="bg-[url('empanadas.jpg')] bg-cover bg-center p-6 rounded-lg shadow-xl">
+<div class="bg-black bg-opacity-70 rounded-xl p-4 flex items-center gap-6 min-h-[200px]">
 <img alt="Empanada de Humita" class="w-40 h-40 object-cover rounded-md shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdn54LVzJ07358A5NxIRr5i8Oji1A67IozK02h6NttFPZz_ut2Q0XMTqqEJWvXcS5YuWss87Ifi_LPdxr6L74pezoELbqlEdmWttaDdRLocIevQmdOFRJnZV57KmunlnkX1DBzYjD3GEikvTHBa6BVaorDX4N-SPk9954fm2tGo8-9LuRbZemFZ-5NLL42Tl8Fw23LtpT9CChv8mNtpwh9sQ2FztYPcBJkbb75nmbbuya4Y3M3giJwlOiLWomkusLUyBmFa9luTXDC"/>
 <div class="flex-1 md:text-right">
 <h3 class="text-white text-xl font-bold">Empanada de Humita</h3>
@@ -171,7 +189,7 @@
 </section>
 </div>
 <div class="flex items-center gap-4">
-<a class="text-stone-300 hover:text-[var(--primary-color)] transition-colors" href="#">
+<a class="text-stone-300 hover:text-[var(--primary-color)] transition-colors" href="https://www.instagram.com/">
 <svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg">
 <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
 </svg>
@@ -185,4 +203,5 @@
 </footer>
 </div>
 </div>
+<script src="app.js"></script>
 </body></html>
